@@ -53,6 +53,10 @@ body {
 	height: 100vh;
 }
 
+button, li {
+	cursor: pointer;
+}
+
 #app {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
