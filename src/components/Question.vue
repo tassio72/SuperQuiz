@@ -3,7 +3,8 @@
         <span> {{ question.text}} </span>
         <ul class="answers">
             <!--o array answers está na propriedade question-->
-            <li v-for="(answer, i) in question.answers" :key="answer.text">
+            <li v-for="(answer, i) in question.answers" :key="answer.text"
+                @click="$emit('answered', answer.correct)">
                 <span class="number"> {{ i + 1}}</span>
                 <span class="text"> {{ answer.text}}</span>
             </li>
@@ -15,7 +16,7 @@
 export default {
     props: {
         question: {
-            type: Boolean,
+            type: Object,
             required: true
         }
     }
